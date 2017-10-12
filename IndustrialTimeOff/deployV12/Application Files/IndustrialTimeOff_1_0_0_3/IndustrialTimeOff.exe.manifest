@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="IndustrialTimeOff.exe" version="1.0.0.3" publicKeyToken="86f32d7b50b9daaf" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="IndustrialTimeOff" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="IndustrialTimeOff.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IndustrialTimeOff.exe" size="4114392">
+      <assemblyIdentity name="IndustrialTimeOff" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>vQ6e25hh1neGl8NIWQeSz/Qtn8eMuN5poaj+cZt7BjY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="IndustrialTimeOff.exe.config" size="574">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aw4oa/heZEhcJI/0pG0Nm/Sez/L8IhX8a+Eo7m/CiGQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ReadMe.txt" size="1600">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>g3aRKhha1EpryapUSrHsnI7yCziYxzvkCSAvZqu1bSM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="TimeOffDatabase.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+82dtFJHGc6sVC47NcP/X6A1/3GA1jRoiQz9wA/b5as=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="TimeOffDatabase_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>n2mTYrUTc/0EAfnRWmgewsTs/zsOtYnMDrzP59ew/ew=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=ENTERPRISE\VLubarda" issuerKeyHash="dd07abe8587be0a87e8f4aa1e27a362f03125a6e" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>I5rpKYguHmdnSzpLsgd1NpAI+FJYLXI9JgGGzBUd4cY=</DigestValue></Reference></SignedInfo><SignatureValue>QoVjVYj/amotI9k7hQ6YSOJpdOsH05m2iR8lkCPqpi+ohWGPgsHxQXbQp0wDaB2qF6cmbYicZ77CiGRao3eOE/3ix2cWhe1Ol96wUYjbXgnW/FZIAaZ/1EnPhL2VbtFqo6bxLJvMrfADZJNmWTDCgevob/j9aRt3h5X3FfJ4mP8=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>s/SU/GH5s+6EOJK/h+eqrd4shOOCpx6sKT/iXiTJVcYEF94H3mFB0rS/6c8s/dsGNpb7tWDJlfIQ6FMHKbXhmURQGQ0oJVBdjaSgB0o/BhFEh694I+UW6onUjNuKzk7DsiphlAbN6BFHr39Iii16MTry6UClB4Y7ByehdJO4Pyc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="c6e11d15cc8601263d722d5852f80890367507b24b3a4b67671e2e8829e99a23" Description="" Url=""><as:assemblyIdentity name="IndustrialTimeOff.exe" version="1.0.0.3" publicKeyToken="86f32d7b50b9daaf" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ENTERPRISE\VLubarda</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>JFTEDYAN9FxYY4MyLMR2TUp3wzs3icvHc/fudk6dlxU=</DigestValue></Reference></SignedInfo><SignatureValue>eLG45ZYc+QxJeb/xnNXHXfJ0s4ideRZWQB10ZoIx9Ot8DJxc3SGRIhDRFHjdkd6huH60PZ8m7tfL0Yq7AUWaA9+A/E4+txOdg1I2aZunyzx/RdVQvlWx7XyIbTUyOcyNlDW/l6BElDZXIdkWxQ7g5vFpkrsjXJmZyhCnGC8sDaA=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>s/SU/GH5s+6EOJK/h+eqrd4shOOCpx6sKT/iXiTJVcYEF94H3mFB0rS/6c8s/dsGNpb7tWDJlfIQ6FMHKbXhmURQGQ0oJVBdjaSgB0o/BhFEh694I+UW6onUjNuKzk7DsiphlAbN6BFHr39Iii16MTry6UClB4Y7ByehdJO4Pyc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQeSNgANNjQ7VDCckZesbi1DANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDHiYARQBOAFQARQBSAFAAUgBJAFMARQBcAFYATAB1AGIAYQByAGQAYTAeFw0xNzAzMjUyMzAxMjJaFw0xODAzMjYwNTAxMjJaMDExLzAtBgNVBAMeJgBFAE4AVABFAFIAUABSAEkAUwBFAFwAVgBMAHUAYgBhAHIAZABhMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCz9JT8Yfmz7oQ4kr+H56qt3iyE44KnHqwpP+JeJMlVxgQX3gfeYUHStL/pzyz92wY2lvu1YMmV8hDoUwcpteGZRFAZDSglUF2NpKAHSj8GEUSHr3gj5RbqidSM24rOTsOyKmGUBs3oEUevf0iKLXoxOvLpQKUHhjsHJ6F0k7g/JwIDAQABMA0GCSqGSIb3DQEBCwUAA4GBACuEeVwhmMxNt/McU4PtXFFgZsIxYGulXQPNoCG19J0Qf1kkV386i4LNijmIUbQ1E6dR8AerXQpyn9h4RCtfUDhHI4NPQrBWfVkuqwsuHpEUWm7WqZQcUvVQRjafsBhYDePRgUBxa6BsyELbKhTNUgZIijnndb+7TgTTrvrfbTUl</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

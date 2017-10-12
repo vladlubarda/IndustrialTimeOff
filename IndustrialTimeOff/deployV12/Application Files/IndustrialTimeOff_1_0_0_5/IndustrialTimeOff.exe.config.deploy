@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="IndustrialTimeOff.Properties.Settings.TimeOffDatabaseConnectionString"
+
+		connectionString="Data Source=(LocalDB)\INDUSTRIAL;Initial Catalog=TimeOffDatabase;Integrated Security=True;Pooling=False"
+providerName="System.Data.SqlClient" />
+
+	</connectionStrings>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+</configuration>
+
+<!--connectionString="Data Source=(LocalDB)\INDUSTRIAL;AttachDbFilename=|DataDirectory|\TimeOffDatabase.mdf;Integrated Security=True"
+            providerName="System.Data.SqlClient" />-->
+
+<!--connectionString="Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=TimeOffDatabase;Integrated Security=True;Pooling=False"
+providerName="System.Data.SqlClient" />-->
+
+<!--connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\TimeOffDatabase.mdf;Integrated Security=True"
+providerName="System.Data.SqlClient" />-->
+
+
