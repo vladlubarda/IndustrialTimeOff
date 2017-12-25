@@ -29,7 +29,14 @@ namespace IndustrialTimeOff
             DateTime.ParseExact( "09/04/2017", "d", CultureInfo.InvariantCulture ),
             DateTime.ParseExact( "11/23/2017", "d", CultureInfo.InvariantCulture ),
             DateTime.ParseExact( "11/24/2017", "d", CultureInfo.InvariantCulture ),
-            DateTime.ParseExact( "12/25/2017", "d", CultureInfo.InvariantCulture )
+            DateTime.ParseExact( "12/25/2017", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "01/01/2018", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "05/28/2018", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "07/04/2018", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "09/03/2018", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "11/22/2018", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "11/23/2018", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "12/25/2018", "d", CultureInfo.InvariantCulture )
             };
 
 
@@ -176,8 +183,7 @@ union hired 6/30/16
             DateTime endDate = DateTime.Now;
             if ( terminationDate != System.DBNull.Value )
             {
-                string s = terminationDate.ToString();
-                endDate = DateTime.ParseExact( s, "d", CultureInfo.InvariantCulture );
+                endDate = (DateTime)terminationDate;
             }
 
             if ( union )
@@ -195,10 +201,11 @@ union hired 6/30/16
                 }
                 else
                 {
-                    var lastDayOfYear = new DateTime( DateTime.Now.Year - 1, 10, 23 );
+                    //var lastDayOfYear = new DateTime( DateTime.Now.Year - 1, 10, 23 );
 
-                    var diff = lastDayOfYear - hireDate;
-                    int daysWorkedPreviousYear = Convert.ToInt32( diff.TotalDays );
+                    //var diff = lastDayOfYear - hireDate;
+                    var diff = unionYearEnd - hireDate;
+                    int daysWorkedPreviousYear = Convert.ToInt32( diff.TotalDays ) - 1;
 
                     int daysPaid = daysWorkedPreviousYear / 90;
 
@@ -295,8 +302,7 @@ union hired 6/30/16
             DateTime endDate = DateTime.Now;
             if ( terminationDate != System.DBNull.Value )
             {
-                string s = terminationDate.ToString();
-                endDate = DateTime.ParseExact( s, "d", CultureInfo.InvariantCulture );
+                endDate = (DateTime)terminationDate;
             }
 
             var duration = endDate - hireDate;
@@ -336,6 +342,7 @@ union hired 6/30/16
 
             if ( union )
             {
+/*
                 var unionYearEnd = new DateTime( DateTime.Now.Year, 10, 23 );
                 if ( DateTime.Now < unionYearEnd )
                 {
@@ -347,6 +354,22 @@ union hired 6/30/16
                 {
                     earnedFloatingDays = 3;
                 }
+*/
+/*
+// "Did I mention the floating days were not available for the new hires on Oct 23rd?  They should be automatic for all union, even if just hired the day before"
+                var unionYearStart = new DateTime( DateTime.Now.Year, 10, 23 );
+                if ( DateTime.Now < unionYearStart )
+                {
+                    unionYearStart = unionYearStart.AddYears( -1 );
+                }
+
+                if ( hireDate < unionYearStart )
+                {
+                    earnedFloatingDays = 3;
+                }
+*/
+                //122117 - decided to simply always return 3  
+                earnedFloatingDays = 3;
 
                 // only add startingSickBalance for first year
                 if ( DateTime.Now.Year == 2017 )
