@@ -31,11 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,19 +38,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TimeOffManager = new System.Windows.Forms.TabControl();
             this.Employees = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SaveEmployee = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unionDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.hireDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.terminationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startingVacationBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startingSickBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartingFloatingBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timeOffDatabaseDataSet = new IndustrialTimeOff.TimeOffDatabaseDataSet();
             this.TimeOffEntry = new System.Windows.Forms.TabPage();
@@ -108,6 +100,14 @@
             this.fKTimeOffToEmployeesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.folderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unionDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.hireDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.terminationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startingVacationBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startingSickBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartingFloatingBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TimeOffManager.SuspendLayout();
             this.Employees.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -209,73 +209,6 @@
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // unionDataGridViewCheckBoxColumn
-            // 
-            this.unionDataGridViewCheckBoxColumn.DataPropertyName = "Union";
-            this.unionDataGridViewCheckBoxColumn.HeaderText = "Union";
-            this.unionDataGridViewCheckBoxColumn.Name = "unionDataGridViewCheckBoxColumn";
-            this.unionDataGridViewCheckBoxColumn.Width = 50;
-            // 
-            // hireDateDataGridViewTextBoxColumn
-            // 
-            this.hireDateDataGridViewTextBoxColumn.DataPropertyName = "HireDate";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.hireDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.hireDateDataGridViewTextBoxColumn.HeaderText = "Hire Date";
-            this.hireDateDataGridViewTextBoxColumn.Name = "hireDateDataGridViewTextBoxColumn";
-            this.hireDateDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // terminationDateDataGridViewTextBoxColumn
-            // 
-            this.terminationDateDataGridViewTextBoxColumn.DataPropertyName = "TerminationDate";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.terminationDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.terminationDateDataGridViewTextBoxColumn.HeaderText = "Termination Date";
-            this.terminationDateDataGridViewTextBoxColumn.Name = "terminationDateDataGridViewTextBoxColumn";
-            this.terminationDateDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // startingVacationBalanceDataGridViewTextBoxColumn
-            // 
-            this.startingVacationBalanceDataGridViewTextBoxColumn.DataPropertyName = "StartingVacationBalance";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.startingVacationBalanceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.startingVacationBalanceDataGridViewTextBoxColumn.HeaderText = "Starting Vacation Balance";
-            this.startingVacationBalanceDataGridViewTextBoxColumn.Name = "startingVacationBalanceDataGridViewTextBoxColumn";
-            this.startingVacationBalanceDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // startingSickBalanceDataGridViewTextBoxColumn
-            // 
-            this.startingSickBalanceDataGridViewTextBoxColumn.DataPropertyName = "StartingSickBalance";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.startingSickBalanceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.startingSickBalanceDataGridViewTextBoxColumn.HeaderText = "Starting Sick Balance";
-            this.startingSickBalanceDataGridViewTextBoxColumn.Name = "startingSickBalanceDataGridViewTextBoxColumn";
-            this.startingSickBalanceDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // StartingFloatingBalance
-            // 
-            this.StartingFloatingBalance.DataPropertyName = "StartingFloatingBalance";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.StartingFloatingBalance.DefaultCellStyle = dataGridViewCellStyle6;
-            this.StartingFloatingBalance.HeaderText = "Starting Floating Balance";
-            this.StartingFloatingBalance.Name = "StartingFloatingBalance";
-            this.StartingFloatingBalance.Width = 60;
-            // 
             // employeesBindingSource
             // 
             this.employeesBindingSource.DataMember = "Employees";
@@ -374,8 +307,7 @@
             this.SelectType.FormattingEnabled = true;
             this.SelectType.Items.AddRange(new object[] {
             "Sick",
-            "Vacation",
-            "Floating"});
+            "Vacation"});
             this.SelectType.Location = new System.Drawing.Point(203, 120);
             this.SelectType.Name = "SelectType";
             this.SelectType.Size = new System.Drawing.Size(121, 21);
@@ -788,6 +720,76 @@
             this.folderBrowserDialog1.Description = "Select the directory that you want to backup the database files to";
             this.folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.NetworkShortcuts;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // unionDataGridViewCheckBoxColumn
+            // 
+            this.unionDataGridViewCheckBoxColumn.DataPropertyName = "Union";
+            this.unionDataGridViewCheckBoxColumn.HeaderText = "Union";
+            this.unionDataGridViewCheckBoxColumn.Name = "unionDataGridViewCheckBoxColumn";
+            this.unionDataGridViewCheckBoxColumn.Width = 50;
+            // 
+            // hireDateDataGridViewTextBoxColumn
+            // 
+            this.hireDateDataGridViewTextBoxColumn.DataPropertyName = "HireDate";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.hireDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.hireDateDataGridViewTextBoxColumn.HeaderText = "Hire Date";
+            this.hireDateDataGridViewTextBoxColumn.Name = "hireDateDataGridViewTextBoxColumn";
+            this.hireDateDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // terminationDateDataGridViewTextBoxColumn
+            // 
+            this.terminationDateDataGridViewTextBoxColumn.DataPropertyName = "TerminationDate";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.terminationDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.terminationDateDataGridViewTextBoxColumn.HeaderText = "Termination Date";
+            this.terminationDateDataGridViewTextBoxColumn.Name = "terminationDateDataGridViewTextBoxColumn";
+            this.terminationDateDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // startingVacationBalanceDataGridViewTextBoxColumn
+            // 
+            this.startingVacationBalanceDataGridViewTextBoxColumn.DataPropertyName = "StartingVacationBalance";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.startingVacationBalanceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.startingVacationBalanceDataGridViewTextBoxColumn.HeaderText = "Vacation Adjustment";
+            this.startingVacationBalanceDataGridViewTextBoxColumn.Name = "startingVacationBalanceDataGridViewTextBoxColumn";
+            this.startingVacationBalanceDataGridViewTextBoxColumn.ToolTipText = "Enter a positive value to add days, negative to subtract available days.";
+            this.startingVacationBalanceDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // startingSickBalanceDataGridViewTextBoxColumn
+            // 
+            this.startingSickBalanceDataGridViewTextBoxColumn.DataPropertyName = "StartingSickBalance";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.startingSickBalanceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.startingSickBalanceDataGridViewTextBoxColumn.HeaderText = "Sick Adjustment";
+            this.startingSickBalanceDataGridViewTextBoxColumn.Name = "startingSickBalanceDataGridViewTextBoxColumn";
+            this.startingSickBalanceDataGridViewTextBoxColumn.ToolTipText = "Enter a positive value to add days, negative to subtract available days.";
+            this.startingSickBalanceDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // StartingFloatingBalance
+            // 
+            this.StartingFloatingBalance.DataPropertyName = "StartingFloatingBalance";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.StartingFloatingBalance.DefaultCellStyle = dataGridViewCellStyle6;
+            this.StartingFloatingBalance.HeaderText = "Floating Adjustment";
+            this.StartingFloatingBalance.Name = "StartingFloatingBalance";
+            this.StartingFloatingBalance.ToolTipText = "Enter a positive value to add days, negative to subtract available days.";
+            this.StartingFloatingBalance.Width = 60;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -873,6 +875,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeIdDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIdDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn unionDataGridViewCheckBoxColumn;
@@ -881,13 +890,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn startingVacationBalanceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn startingSickBalanceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartingFloatingBalance;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIdDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog2;
     }
 }
 

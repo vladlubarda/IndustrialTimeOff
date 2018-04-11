@@ -13,13 +13,16 @@ namespace IndustrialTimeOff
         bool union;
         DateTime hireDate;
         object terminationDate;
+        //032918 - so as not to modify database, reuse these field for adjustments. 
+        //         Starting balances were for 2017 anyway.
         int startingSickBalance;
         int startingVacationBalance;
         int startingFloatingBalance;
 
         int sickDaysUsed = 0;
         int vacationDaysUsed = 0;
-        int floatingDaysUsed = 0;
+        //032918 - floating days are more like holidays
+        //int floatingDaysUsed = 0;
 
         List<DateTime> holidays = new List<DateTime>() 
             { 
@@ -37,6 +40,13 @@ namespace IndustrialTimeOff
             DateTime.ParseExact( "11/22/2018", "d", CultureInfo.InvariantCulture ),
             DateTime.ParseExact( "11/23/2018", "d", CultureInfo.InvariantCulture ),
             DateTime.ParseExact( "12/25/2018", "d", CultureInfo.InvariantCulture )
+            };
+
+        List<DateTime> unionFloatingHolidays = new List<DateTime>()
+            {
+            DateTime.ParseExact( "02/19/2018", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "03/30/2018", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "10/08/2018", "d", CultureInfo.InvariantCulture )
             };
 
 
@@ -99,14 +109,14 @@ namespace IndustrialTimeOff
                                     var unionYearStart = unionYearEnd.AddYears( -1 );
                                     if ( start > unionYearStart && end < unionYearEnd )
                                     {
-                                        sickDaysUsed += calculateNumberOfDays( start, end );
+                                        sickDaysUsed += calculateNumberOfDays( start, end, true );
                                     }
                                 }
                                 else // non-union
                                 {
                                     if ( start.Year == DateTime.Now.Year )
                                     {
-                                        sickDaysUsed += calculateNumberOfDays( start, end );
+                                        sickDaysUsed += calculateNumberOfDays( start, end, false );
                                     }
                                 }
                                 break;
@@ -117,38 +127,50 @@ namespace IndustrialTimeOff
                                     anniversaryStartDate = anniversaryStartDate.AddYears( -1 );
                                 }
 
-                                if ( start > anniversaryStartDate )
+                                if ( end > anniversaryStartDate )
                                 {
-                                    vacationDaysUsed += calculateNumberOfDays( start, end );
+                                    // in case vaca straddles anniversary
+                                    if ( start > anniversaryStartDate )
+                                    {
+                                        vacationDaysUsed += calculateNumberOfDays( start, end, union );
+                                    }
+                                    else 
+                                    {
+                                        vacationDaysUsed += calculateNumberOfDays( anniversaryStartDate, end, union );
+                                    }
                                 }
                                 break;
-                            case "Floating":
-                                if ( union )
-                                {
-                                    var anniversaryStart = new DateTime( DateTime.Now.Year, hireDate.Month, hireDate.Day );
-                                    if ( anniversaryStart > DateTime.Now )
-                                    {
-                                        anniversaryStart = anniversaryStart.AddYears( -1 );
-                                    }
+                                //032918 - floating is now more like holidays
+                            //case "Floating":
+                            //    if ( union )
+                            //    {
+                            //        var anniversaryStart = new DateTime( DateTime.Now.Year, hireDate.Month, hireDate.Day );
+                            //        if ( anniversaryStart > DateTime.Now )
+                            //        {
+                            //            anniversaryStart = anniversaryStart.AddYears( -1 );
+                            //        }
 
-                                    if ( start > anniversaryStart )
-                                    {
-                                        floatingDaysUsed += calculateNumberOfDays( start, end );
-                                    }
-                                }
-                                break;
+                            //        if ( start > anniversaryStart )
+                            //        {
+                            //            floatingDaysUsed += calculateNumberOfDays( start, end );
+                            //        }
+                            //    }
+                            //    break;
                         }
                     }
                 }
             }
         }
 
-        protected int calculateNumberOfDays( DateTime start, DateTime end )
+        protected int calculateNumberOfDays( DateTime start, DateTime end, bool union )
         {
             int count = 0;
             for ( DateTime index = start; index <= end; index = index.AddDays( 1 ) )
             {
-                if ( index.DayOfWeek != DayOfWeek.Sunday && index.DayOfWeek != DayOfWeek.Saturday && !holidays.Contains( index )) 
+                if ( index.DayOfWeek != DayOfWeek.Sunday && 
+                     index.DayOfWeek != DayOfWeek.Saturday && 
+                     !holidays.Contains( index ) && 
+                     ! (union && unionFloatingHolidays.Contains( index )) ) 
                     count++;
             }
 
@@ -288,9 +310,8 @@ union hired 6/30/16
                     }
                 }
             }
-            // only add startingSickBalance for first year
-            if ( DateTime.Now.Year == 2017 )
-                earnedSickDays += startingSickBalance;
+
+            earnedSickDays += startingSickBalance;
 
             return earnedSickDays;
         }
@@ -329,9 +350,7 @@ union hired 6/30/16
                 earnedVacationDays = 5;
             }
 
-            // only add startingSickBalance for first year
-            if ( DateTime.Now.Year == 2017 )
-                earnedVacationDays += startingVacationBalance;
+            earnedVacationDays += startingVacationBalance;
 
             return earnedVacationDays;
         }
@@ -369,11 +388,11 @@ union hired 6/30/16
                 }
 */
                 //122117 - decided to simply always return 3  
-                earnedFloatingDays = 3;
+                //earnedFloatingDays = 3;
 
-                // only add startingSickBalance for first year
-                if ( DateTime.Now.Year == 2017 )
-                    earnedFloatingDays += startingFloatingBalance;
+                //032917 - floating days are now treated similar to holdidays for union members.
+                //         Use adjustment field for any adjustments
+                earnedFloatingDays += startingFloatingBalance;
             }
 
             return earnedFloatingDays;
@@ -395,7 +414,9 @@ union hired 6/30/16
 
         public string CalculateFloatingDays()
         {
-            int floatingDays = CalculateEarnedFloatingDays() - floatingDaysUsed;
+            //032918 - floating days are just treated like holidays now
+            //int floatingDays = CalculateEarnedFloatingDays() - floatingDaysUsed;
+            int floatingDays = CalculateEarnedFloatingDays();
 
             return floatingDays.ToString();
         }

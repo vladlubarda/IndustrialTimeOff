@@ -49,10 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>6E975CB28E92A0361146E2DF562B5BB905439866</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>A385AFE3F10E07EE5402F7B60F686C58EA3D22BB</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>IndustrialTimeOff_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>IndustrialTimeOff_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -103,6 +103,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="IndustrialTimeOff_1_TemporaryKey.pfx" />
     <None Include="IndustrialTimeOff_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
