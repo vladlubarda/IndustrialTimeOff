@@ -39,14 +39,25 @@ namespace IndustrialTimeOff
             DateTime.ParseExact( "09/03/2018", "d", CultureInfo.InvariantCulture ),
             DateTime.ParseExact( "11/22/2018", "d", CultureInfo.InvariantCulture ),
             DateTime.ParseExact( "11/23/2018", "d", CultureInfo.InvariantCulture ),
-            DateTime.ParseExact( "12/25/2018", "d", CultureInfo.InvariantCulture )
+            DateTime.ParseExact( "12/25/2018", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "01/01/2019", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "05/27/2019", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "07/04/2019", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "09/02/2019", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "11/28/2019", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "11/29/2019", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "12/25/2019", "d", CultureInfo.InvariantCulture )
             };
 
         List<DateTime> unionFloatingHolidays = new List<DateTime>()
             {
             DateTime.ParseExact( "02/19/2018", "d", CultureInfo.InvariantCulture ),
             DateTime.ParseExact( "03/30/2018", "d", CultureInfo.InvariantCulture ),
-            DateTime.ParseExact( "10/08/2018", "d", CultureInfo.InvariantCulture )
+            DateTime.ParseExact( "10/08/2018", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "02/18/2019", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "04/19/2019", "d", CultureInfo.InvariantCulture ),
+            DateTime.ParseExact( "10/14/2019", "d", CultureInfo.InvariantCulture )
+
             };
 
 
